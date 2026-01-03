@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Research Group</title>
+    <title>科研成果 - 中医药免疫研究团队</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .publication-year {
             font-size: 1.5rem;
-            color: #2c3e50;
-            border-bottom: 2px solid #ddd;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
             margin: 30px 0 20px;
             padding-bottom: 10px;
         }
@@ -21,40 +21,41 @@
         .pub-thumbnail {
             width: 120px;
             height: 80px;
-            background-color: #eee;
+            background-color: var(--primary-light);
             flex-shrink: 0;
             border-radius: 4px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
         }
         .pub-details h4 {
             margin-bottom: 5px;
             font-size: 1.1rem;
         }
         .pub-authors {
-            color: #555;
+            color: var(--text-secondary);
             margin-bottom: 5px;
         }
         .pub-venue {
             font-style: italic;
-            color: #666;
+            color: var(--text-light);
             margin-bottom: 5px;
         }
         .pub-links a {
             font-size: 0.9em;
             margin-right: 10px;
             padding: 2px 8px;
-            border: 1px solid #0056b3;
+            border: 1px solid var(--primary-light);
             border-radius: 4px;
-            color: #0056b3;
+            color: var(--primary-light);
             text-decoration: none;
+            transition: var(--transition);
         }
         .pub-links a:hover {
-            background-color: #0056b3;
+            background-color: var(--primary-light);
             color: white;
         }
-        /* Highlight specific author */
         .me {
             font-weight: bold;
-            color: #000;
+            color: var(--primary-color);
         }
     </style>
 </head>
@@ -62,14 +63,14 @@
     <header>
         <div class="container header-content">
             <div class="logo">
-                <a href="index.html" style="color: inherit; text-decoration: none;">Research Group Name</a>
+                <a href="index.html" style="color: inherit; text-decoration: none;">中医药免疫研究团队</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="members.html">Members</a></li>
-                    <li><a href="publications.html" class="active">Publications</a></li>
-                    <li><a href="news.html">News</a></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="members.html">团队成员</a></li>
+                    <li><a href="publications.html" class="active">科研成果</a></li>
+                    <li><a href="news.html">新闻动态</a></li>
                 </ul>
             </nav>
         </div>
@@ -77,23 +78,22 @@
 
     <main class="container">
         <section>
-            <h1>Publications & Work</h1>
-            <p>Selected publications and project outcomes.</p>
+            <h1>科研成果</h1>
+            <p>代表性论文和项目成果</p>
         </section>
 
         <section>
             <h2 class="publication-year">2024</h2>
             
             <div class="pub-item">
-                <div class="pub-thumbnail"></div> <!-- Placeholder for paper teaser -->
+                <div class="pub-thumbnail"></div>
                 <div class="pub-details">
-                    <h4><a href="#">Advanced Neural Networks for Something Important</a></h4>
-                    <div class="pub-authors">Alice Johnson, <span class="me">John Doe</span>, Bob Brown</div>
-                    <div class="pub-venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2024</div>
+                    <h4><a href="#">中医药调控母胎免疫微环境的关键机制研究</a></h4>
+                    <div class="pub-authors">李霞, 张伟, 王芳, <span class="me">刘洋</span></div>
+                    <div class="pub-venue">Nature Communications Biology (NCB), 2024</div>
                     <div class="pub-links">
                         <a href="#">PDF</a>
-                        <a href="#">Code</a>
-                        <a href="#">Project Page</a>
+                        <a href="#">项目主页</a>
                     </div>
                 </div>
             </div>
@@ -101,12 +101,12 @@
             <div class="pub-item">
                 <div class="pub-thumbnail"></div>
                 <div class="pub-details">
-                    <h4><a href="#">Another Great Paper Title Here</a></h4>
-                    <div class="pub-authors"><span class="me">John Doe</span>, Jane Smith</div>
-                    <div class="pub-venue">International Conference on Learning Representations (ICLR), 2024</div>
+                    <h4><a href="#">中医药调控肿瘤免疫微环境的新策略</a></h4>
+                    <div class="pub-authors"><span class="me">李霞</span>, 陈明, 杨静</div>
+                    <div class="pub-venue">Journal of Clinical Investigation (JCI), 2024</div>
                     <div class="pub-links">
                         <a href="#">PDF</a>
-                        <a href="#">Code</a>
+                        <a href="#">代码</a>
                     </div>
                 </div>
             </div>
@@ -118,12 +118,54 @@
              <div class="pub-item">
                 <div class="pub-thumbnail"></div>
                 <div class="pub-details">
-                    <h4><a href="#">Previous Work on Topic X</a></h4>
-                    <div class="pub-authors">Jane Smith, <span class="me">John Doe</span></div>
-                    <div class="pub-venue">NeurIPS, 2023</div>
+                    <h4><a href="#">中医药抗血管炎症损伤的分子机制</a></h4>
+                    <div class="pub-authors">王芳, <span class="me">李霞</span>, 张伟</div>
+                    <div class="pub-venue">Cancer Letters, 2023</div>
                     <div class="pub-links">
                         <a href="#">PDF</a>
-                        <a href="#">Code</a>
+                        <a href="#">项目主页</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4><a href="#">中医药防治复发性自然流产的免疫调控机制</a></h4>
+                    <div class="pub-authors"><span class="me">李霞</span>, 刘洋, 赵强</div>
+                    <div class="pub-venue">Cell Death & Disease, 2023</div>
+                    <div class="pub-links">
+                        <a href="#">PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4><a href="#">中医药免疫调控关键技术及应用</a></h4>
+                    <div class="pub-authors">李霞, 张伟, 王芳</div>
+                    <div class="pub-venue">Arteriosclerosis, Thrombosis, and Vascular Biology (ATVB), 2023</div>
+                    <div class="pub-links">
+                        <a href="#">PDF</a>
+                        <a href="#">项目主页</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="publication-year">2022</h2>
+            
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4><a href="#">中医药调控免疫细胞功能的新发现</a></h4>
+                    <div class="pub-authors"><span class="me">李霞</span>, 陈明</div>
+                    <div class="pub-venue">International Journal of Biological Sciences, 2022</div>
+                    <div class="pub-links">
+                        <a href="#">PDF</a>
+                        <a href="#">项目主页</a>
                     </div>
                 </div>
             </div>
@@ -133,8 +175,9 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Research Group Name. All rights reserved.</p>
-            <p>Contact: email@example.com | Address: Building 123, University Campus</p>
+            <p>&copy; 2024 中医药免疫研究团队. 版权所有</p>
+            <p>地址：山东省济南市长清区大学科技园大学路4655号山东中医药大学中医药创新研究院</p>
+            <p>邮编：250355</p>
             <div class="social-links">
                 <a href="#" title="GitHub">GH</a>
                 <a href="#" title="Twitter">TW</a>
@@ -145,4 +188,3 @@
     </footer>
 </body>
 </html>
-
