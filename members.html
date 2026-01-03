@@ -5,6 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>团队成员 - 中医药免疫研究团队</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .supervisor-card {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .supervisor-photo {
+            width: 200px;
+            height: 250px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .supervisor-info {
+            flex: 1;
+        }
+        
+        .supervisor-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .supervisor-title {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .supervisor-desc {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        
+        .supervisor-desc p {
+            margin-bottom: 12px;
+        }
+        
+        .supervisor-desc strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .supervisor-card {
+                flex-direction: column;
+            }
+            
+            .supervisor-photo {
+                width: 150px;
+                height: 180px;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,20 +94,78 @@
         </section>
 
         <section>
-            <h2>团队负责人</h2>
-            <div class="members-grid">
-                <div class="member-card">
-                    <div class="member-photo">李</div> 
-                    <div class="member-name">李霞 教授</div>
-                    <div class="member-role">团队负责人</div>
-                    <p>研究方向：中医药免疫调控、生殖免疫学</p>
-                    <a href="#">个人主页 &rarr;</a>
+            <h2>博士生导师</h2>
+            
+            <div class="supervisor-card">
+                <img src="李霞.png" alt="李霞" class="supervisor-photo">
+                <div class="supervisor-info">
+                    <h3>李霞</h3>
+                    <div class="supervisor-title">教授（二级），博士生导师，国家青年岐黄学者，泰山学者特聘专家</div>
+                    <div class="supervisor-desc">
+                        <p><strong>研究方向：</strong>中医药妇科及免疫调控机制及物质基础</p>
+                        <p><strong>教育背景：</strong>美国MD Anderson免疫系访问学者</p>
+                        <p><strong>学术头衔：</strong>山东省中医药高层次人才学术领军人物，2018年入选泰山学者青年专家，2022年入选国家青年岐黄学者，2023年入选山东省中医药高层次人才学术领军人物，2024年入选泰山学者特聘专家。</p>
+                        <p><strong>科研项目：</strong>先后为首主持国家级及省部级科研项目20余项</p>
+                        <p><strong>科研奖励：</strong>首位获得山东省科技进步二等奖、中华中医药学会科技二等奖、中国中西医结合学会科学技术二等奖、中国民族医药学会科学技术二等奖等科研奖励20余项</p>
+                        <p><strong>知识产权：</strong>授权国家发明专利14项</p>
+                        <p><strong>学术成果：</strong>发表期刊学术论文70余篇，其中SCI收录40篇、中文核心期刊论文30余篇；参编著作5部</p>
+                        <p><strong>人才培养：</strong>培养博士研究生5名，硕士研究生20余名</p>
+                        <p><strong>荣誉称号：</strong>获得2023年度教育科技人才贡献奖，四次荣获单位"优秀共产党员"荣誉称号，三次获记单位三等功，三次荣获"于金明科技创新奖"；2024年获山东省"十佳五一巾帼标兵"；2015年获"第十届山东省青年科技奖"；曾获得"优秀硕士生指导教师"、省直机关"最美青年"、省直机关"三八红旗手称号"等荣誉称号。</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>博士研究生</h2>
+            <h2>硕士生导师</h2>
+            
+            <div class="supervisor-card">
+                <img src="张振.jpg" alt="张振" class="supervisor-photo">
+                <div class="supervisor-info">
+                    <h3>张振</h3>
+                    <div class="supervisor-title">副教授</div>
+                    <div class="supervisor-desc">
+                        <p><strong>教育背景：</strong>博士毕业于中国科学院上海生命科学研究院分子细胞科学卓越创新中心（生物化学与分子生物学研究所），从事细胞分子生物学研究</p>
+                        <p><strong>科研项目：</strong>主持国家自然科学基金面上、青年项目各1项，主持山东省重点研发计划项目及山东省自然科学基金面上项目各1项</p>
+                        <p><strong>学术成果：</strong>以第一或通讯作者在Nature Immunology、Cancer Letters、Cell death & disease等国际期刊发表SCI论文40余篇</p>
+                        <p><strong>学术兼职：</strong>现任世界中联教育指导专业委员会理事会理事、山东中西医结合学会中医药免疫专业委员会副主任委员等职</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="supervisor-card">
+                <img src="秦丽萍.jpg" alt="秦丽萍" class="supervisor-photo">
+                <div class="supervisor-info">
+                    <h3>秦丽萍</h3>
+                    <div class="supervisor-title">讲师</div>
+                    <div class="supervisor-desc">
+                        <p><strong>教育背景：</strong>博士毕业于山东大学基础医学院遗传学系，专业为遗传学，从事生殖免疫研究</p>
+                        <p><strong>科研项目：</strong>主持中国博士后特别资助项目、山东省自然科学基金青年项目、山东省医药卫生青年项目、山东省中医药科技面上项目</p>
+                        <p><strong>学术成果：</strong>研究成果以第一作者发表于国际学术期刊Cell death and differentiation (IF:15.4)</p>
+                        <p><strong>科研奖励：</strong>荣获第六届中国免疫学会青年学者奖</p>
+                        <p><strong>学术兼职：</strong>兼任山东免疫学会理事会理事、山东中西医结合学会中医药免疫专业委员会副主任委员、中国疫苗基础研究专业委员会委员等职</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="supervisor-card">
+                <img src="牛亮仲.jpg" alt="牛亮仲" class="supervisor-photo">
+                <div class="supervisor-info">
+                    <h3>牛亮仲</h3>
+                    <div class="supervisor-title">讲师</div>
+                    <div class="supervisor-desc">
+                        <p><strong>教育背景：</strong>博士毕业于中国科学院昆明植物研究所，从事细胞分子生物学研究</p>
+                        <p><strong>科研项目：</strong>主持山东省自然科学青年项目、中国博士后科学基金面上项目各1项，参与国家自然科学基金面上项目2项、山东省自然科学基金重大基础研究项目1项</p>
+                        <p><strong>知识产权：</strong>授权国家发明专利2项</p>
+                        <p><strong>学术成果：</strong>研究成果以第一作者或共同作者发表于Nature Genetics、Molecular Plant等国际期刊</p>
+                        <p><strong>学术兼职：</strong>兼任山东中西医结合学会中医药免疫专业委员会委员，山东免疫学会第二届青年工作委员会委员</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>研究生</h2>
             <div class="members-grid">
                 <div class="member-card">
                     <div class="member-photo">张</div>
@@ -63,18 +185,12 @@
                     <div class="member-role">博士研究生 (2023-)</div>
                     <p>研究方向：血管炎症损伤机制研究</p>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>硕士研究生</h2>
-            <div class="members-grid">
                 <div class="member-card">
                     <div class="member-photo">陈</div>
                     <div class="member-name">陈明</div>
                     <div class="member-role">硕士研究生 (2024-)</div>
                 </div>
-                 <div class="member-card">
+                <div class="member-card">
                     <div class="member-photo">杨</div>
                     <div class="member-name">杨静</div>
                     <div class="member-role">硕士研究生 (2024-)</div>
