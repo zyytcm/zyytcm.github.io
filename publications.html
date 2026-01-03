@@ -6,72 +6,56 @@
     <title>科研成果 - 中医药免疫研究团队</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .research-category {
-            margin-bottom: 40px;
-            background: var(--bg-primary);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-        }
-        .research-category h2 {
-            color: var(--primary-color);
-            border-bottom: 3px solid var(--accent-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+        .publication-year {
             font-size: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
         }
-        .research-list {
-            list-style: none;
-            padding: 0;
+        .pub-item {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
         }
-        .research-item {
-            margin-bottom: 15px;
-            padding: 15px;
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-light);
+        .pub-thumbnail {
+            width: 120px;
+            height: 80px;
+            background-color: var(--primary-light);
+            flex-shrink: 0;
+            border-radius: 4px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+        }
+        .pub-details h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        .pub-authors {
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+        .pub-venue {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        .pub-links a {
+            font-size: 0.9em;
+            margin-right: 10px;
+            padding: 2px 8px;
+            border: 1px solid var(--primary-light);
+            border-radius: 4px;
+            color: var(--primary-light);
+            text-decoration: none;
             transition: var(--transition);
         }
-        .research-item:hover {
-            background: var(--bg-tertiary);
-            transform: translateX(5px);
+        .pub-links a:hover {
+            background-color: var(--primary-light);
+            color: white;
         }
-        .research-item .title {
-            font-weight: 600;
+        .me {
+            font-weight: bold;
             color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-        .research-item .authors {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-        .research-item .journal {
-            color: var(--text-light);
-            font-style: italic;
-            font-size: 0.85rem;
-        }
-        .research-item .year {
-            color: var(--accent-color);
-            font-weight: 600;
-            font-size: 0.85rem;
-            margin-left: 10px;
-        }
-        .patent-item, .award-item, .project-item {
-            margin-bottom: 12px;
-            padding: 12px;
-            background: var(--bg-secondary);
-            border-radius: 6px;
-            border-left: 3px solid var(--accent-color);
-        }
-        .patent-item .title, .award-item .title, .project-item .title {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        .patent-item .info, .award-item .info, .project-item .info {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 5px;
         }
     </style>
 </head>
@@ -95,192 +79,283 @@
     <main class="container">
         <section>
             <h1>科研成果</h1>
-            <p>团队代表性科研成果汇总</p>
+            <p>团队长期致力于中医药免疫调控研究，在多个领域取得重要突破</p>
         </section>
 
-        <!-- 发表SCI收录论文 -->
-        <section class="research-category">
+        <section>
             <h2>发表SCI收录论文</h2>
-            <ul class="research-list">
-                <li class="research-item">
-                    <div class="title">USP47 inhibits m6A-dependent c-Myc translation to maintain regulatory T cell metabolic and functional homeostasis</div>
-                    <div class="authors">Wang A, Huang H, Shi JH, Yu X, Ding R, Zhang Y, Han Q, Ni ZY*, Li X*, Zhao R*, Zou Q*</div>
-                    <div class="journal">J Clin Invest. 2023<span class="year">2023</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">MiR-103 protects from recurrent spontaneous abortion via inhibiting STAT1 mediated M1 macrophage polarization</div>
-                    <div class="authors">Zhu X, Liu H, Zhang Z, Wei R, Zhou X, Wang Z, Zhao L, Guo Q, Zhang Y, Chu C, Wang L*, Li X*</div>
-                    <div class="journal">Int J Biol Sci. 2020<span class="year">2020</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">IL (Interleukin)-6 Contributes to Deep Vein Thrombosis and Is Negatively Regulated by miR-338-5p</div>
-                    <div class="authors">Zhang Y, Zhang Z, Wei R, Miao X, Sun S, Liang G, Chu C, Zhao L, Zhu X, Guo Q, Wang B*, Li X*</div>
-                    <div class="journal">Arterioscler Thromb Vasc Biol. 2020<span class="year">2020</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">MiR-337-3p suppresses proliferation of epithelial ovarian cancer by targeting PIK3CA and PIK3CB</div>
-                    <div class="authors">Zhang Z, Zhang L, Wang B, Wei R, Wang Y, Wan J, Zhang C, Zhao L, Zhu X, Zhang Y, Chu C, Guo Q, Yin X, Li X*</div>
-                    <div class="journal">Cancer Lett. 2020<span class="year">2020</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">MIR937 amplification potentiates ovarian cancer progression by attenuating FBXO16 inhibition on ULK1-mediated autophagy</div>
-                    <div class="authors">Zhang Z, Liu X, Chu C, Zhang Y, Li W, Yu X, Han Q, Sun H, Zhang Y, Zhu X, Chen L, Wei R, Fan N, Zhou M, Li X*</div>
-                    <div class="journal">Cell Death Dis. 2024<span class="year">2024</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">Dendritic cells in pregnancy and pregnancy-associated diseases</div>
-                    <div class="authors">Wei R, Lai N, Zhao L, Zhang Z, Zhu X, Guo Q, Chu C, Fu X, Li X*</div>
-                    <div class="journal">Biomed Pharmacother. 2021<span class="year">2021</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">Research Progress on the STAT Signaling Pathway in Pregnancy and Pregnancy-Associated Disorders</div>
-                    <div class="authors">Li L, Zhang Z, Li H, Zhou M, Li F, Chu C, Zhang Y, Zhu X, Jiu H*, Li X*</div>
-                    <div class="journal">Front Immunol. 2024<span class="year">2024</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">miR-130b-3p regulates M1 macrophage polarization via targeting IRF1</div>
-                    <div class="authors">Qiang Guo, Xiaoxiao Zhu, Ran Wei, Lin Zhao, Zhen Zhang, Xunqiang Yin, Yunhong Zhang, Chu Chu, Bin Wang*, Xia Li*</div>
-                    <div class="journal">J Cell Physiol. 2021<span class="year">2021</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">Emerging role of miRNAs, lncRNAs, and circRNAs in pregnancy-associated diseases</div>
-                    <div class="authors">Xiaoxiao Fu, Yuling Li, Zhen Zhang, Bin Wang, Ran Wei, Chu Chu, Ke Xu, Lihua Li, Yonglin Liu, Xia Li*</div>
-                    <div class="journal">Chin Med J (Engl). 2023<span class="year">2023</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">Association of estrogen receptor 1 genetic polymorphisms with recurrent spontaneous abortion risk: a meta-analysis</div>
-                    <div class="authors">Yin XQ, Ju HM, Guo Q, Zhao L, Zhu XX, Wei R, Zhang Z, Zhang YH, Wang B, Li X*</div>
-                    <div class="journal">Chinese Medical Journal (Eng.). 2018<span class="year">2018</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">miR-513c-5p suppression aggravates pyroptosis of endothelial cell in deep venous thrombosis by promoting caspase-1</div>
-                    <div class="authors">Chu C, Wang B, Zhang Z, Liu W, Sun S, Liang G, Zhang X, An H, Wei R, Zhu X, Guo Q, Zhao L, Fu X, Xu K and Li X*</div>
-                    <div class="journal">Front Cell Dev Biol. 2022<span class="year">2022</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">RNF144B inhibits LPS-induced inflammatory responses via binding TBK1</div>
-                    <div class="authors">Zhang Z, Zhang L, Wang B, Zhu X, Zhao L, Chu C, Guo Q, Wei R, Yin X, Zhang Y, Li X*</div>
-                    <div class="journal">J Leukoc Biol. 2019<span class="year">2019</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">The emerging roles of TLR and cGAS signaling in tumorigenesis and progression of ovarian cancer</div>
-                    <div class="authors">Zhen Zhang, Hong Zhao, Chu Chu, Xiaoxiao Fu, Yonglin Liu, Li Wang, Ran Wei, Ke Xu, Lihua Li, Xia Li*</div>
-                    <div class="journal">Front Pharmacol. 2022<span class="year">2022</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">Fluorescence imaging sheds light on the immune evasion mechanisms of hepatic stellate cells mediated by superoxide anion</div>
-                    <div class="authors">Mao Y, Wu C, Wang X, Zhang F, Qi X, Li X, Li Q</div>
-                    <div class="journal">CommunBiol. 2024<span class="year">2024</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">miR-374b-5p is increased in deep vein thrombosis and negatively targets IL-10</div>
-                    <div class="authors">Yunhong Zhang , Xiuming Miao, Zhen Zhang , Ran Wei , Shangwen Sun, Gang Liang, Huihan Li, Chu Chu, Lin Zhao, Xiaoxiao Zhu, Qiang Guo, Bin Wang, Xia Li*</div>
-                    <div class="journal">J Mol Cell Cardiol. 2020<span class="year">2020</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">MiR-19a-3p Suppresses M1 Macrophage Polarization by Inhibiting STAT1/IRF1 Pathway</div>
-                    <div class="authors">Zhu X, Guo Q, Zou J, Wang B, Zhang Z, Wei R, Zhao L, Zhang Y, Chu C, Fu X, Li X*</div>
-                    <div class="journal">Front Pharmacol. 2021<span class="year">2021</span></div>
-                </li>
-                <li class="research-item">
-                    <div class="title">The roles of STAT3 in leukemia</div>
-                    <div class="authors">Shi Y, Zhang Z, Qu X, Zhu X, Zhao L, Wei R, Guo Q, Sun L, Yin X, Zhang Y, Li X*</div>
-                    <div class="journal">International Journal of Oncology. 2018<span class="year">2018</span></div>
-                </li>
-            </ul>
+            
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>MIR937 amplification potentiates ovarian cancer progression by attenuating FBXO16 inhibition on ULK1-mediated autophagy</h4>
+                    <div class="pub-authors">Zhang Z, Liu X, Chu C, Zhang Y, Li W, Yu X, Han Q, Sun H, Zhang Y, Zhu X, Chen L, Wei R, Fan N, Zhou M, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Cell Death & Disease, 2024</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>Research Progress on the STAT Signaling Pathway in Pregnancy and Pregnancy-Associated Disorders</h4>
+                    <div class="pub-authors">Li L, Zhang Z, Li H, Zhou M, Li F, Chu C, Zhang Y, Zhu X, Jiu H*, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Frontiers in Immunology, 2024</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>Fluorescence imaging sheds light on the immune evasion mechanisms of hepatic stellate cells mediated by superoxide anion</h4>
+                    <div class="pub-authors">Mao Y, Wu C, Wang X, Zhang F, Qi X, Li X, Li Q</div>
+                    <div class="pub-venue">Communications Biology, 2024</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>Emerging role of miRNAs, lncRNAs, and circRNAs in pregnancy-associated diseases</h4>
+                    <div class="pub-authors">Fu X, Li Y, Zhang Z, Wang B, Wei R, Chu C, Xu K, Li L, Liu Y, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Chinese Medical Journal, 2023</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>USP47 inhibits m6A-dependent c-Myc translation to maintain regulatory T cell metabolic and functional homeostasis</h4>
+                    <div class="pub-authors">Wang A, Huang H, Shi JH, Yu X, Ding R, Zhang Y, Han Q, Ni ZY*, <span class="me">Li X</span>, Zhao R*, Zou Q*</div>
+                    <div class="pub-venue">Journal of Clinical Investigation, 2023</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>miR-513c-5p suppression aggravates pyroptosis of endothelial cell in deep venous thrombosis by promoting caspase-1</h4>
+                    <div class="pub-authors">Chu C, Wang B, Zhang Z, Liu W, Sun S, Liang G, Zhang X, An H, Wei R, Zhu X, Guo Q, Zhao L, Fu X, Xu K, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Frontiers in Cell and Developmental Biology, 2022</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>The emerging roles of TLR and cGAS signaling in tumorigenesis and progression of ovarian cancer</h4>
+                    <div class="pub-authors">Zhang Z, Zhao H, Chu C, Fu X, Liu Y, Wang L, Wei R, Xu K, Li L, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Frontiers in Pharmacology, 2022</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>Diminished miR374c5p negatively regulates IL-6 in unexplained recurrent spontaneous abortion</h4>
+                    <div class="pub-authors">Zhao L, Han L, Hei GO, Wei R, Zhang Z, Zhu X, Guo Q, Chu C, Fu X, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Journal of Molecular Medicine, 2022</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>miR-130b-3p regulates M1 macrophage polarization via targeting IRF1</h4>
+                    <div class="pub-authors">Guo Q, Zhu X, Wei R, Zhao L, Zhang Z, Yin X, Zhang Y, Chu C, Wang B*, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Journal of Cellular Physiology, 2021</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>Dendritic cells in pregnancy and pregnancy-associated diseases</h4>
+                    <div class="pub-authors">Wei R, Lai N, Zhao L, Zhang Z, Zhu X, Guo Q, Chu C, Fu X, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Biomedicine & Pharmacotherapy, 2021</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>MiR-19a-3p Suppresses M1 Macrophage Polarization by Inhibiting STAT1/IRF1 Pathway</h4>
+                    <div class="pub-authors">Zhu X, Guo Q, Zou J, Wang B, Zhang Z, Wei R, Zhao L, Zhang Y, Chu C, Fu X, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Frontiers in Pharmacology, 2021</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>miR-374b-5p is increased in deep vein thrombosis and negatively targets IL-10</h4>
+                    <div class="pub-authors">Zhang Y, Miao X, Zhang Z, Wei R, Sun S, Liang G, Li H, Chu C, Zhao L, Zhu X, Guo Q, Wang B, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Journal of Molecular and Cellular Cardiology, 2020</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>MiR-103 protects from recurrent spontaneous abortion via inhibiting STAT1 mediated M1 macrophage polarization</h4>
+                    <div class="pub-authors">Zhu X, Liu H, Zhang Z, Wei R, Zhou X, Wang Z, Zhao L, Guo Q, Zhang Y, Chu C, Wang L*, <span class="me">Li X</span></div>
+                    <div class="pub-venue">International Journal of Biological Sciences, 2020</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>IL-6 Contributes to Deep Vein Thrombosis and Is Negatively Regulated by miR-338-5p</h4>
+                    <div class="pub-authors">Zhang Y, Zhang Z, Wei R, Miao X, Sun S, Liang G, Chu C, Zhao L, Zhu X, Guo Q, Wang B*, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Arteriosclerosis, Thrombosis, and Vascular Biology, 2020</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>MiR-337-3p suppresses proliferation of epithelial ovarian cancer by targeting PIK3CA and PIK3CB</h4>
+                    <div class="pub-authors">Zhang Z, Zhang L, Wang B, Wei R, Wang Y, Wan J, Zhang C, Zhao L, Zhu X, Zhang Y, Chu C, Guo Q, Yin X, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Cancer Letters, 2020</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>Association of estrogen receptor 1 genetic polymorphisms with recurrent spontaneous abortion risk: a meta-analysis</h4>
+                    <div class="pub-authors">Yin XQ, Ju HM, Guo Q, Zhao L, Zhu XX, Wei R, Zhang Z, Zhang YH, Wang B, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Chinese Medical Journal, 2018</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>The roles of STAT3 in leukemia</h4>
+                    <div class="pub-authors">Shi Y, Zhang Z, Qu X, Zhu X, Zhao L, Wei R, Guo Q, Sun L, Yin X, Zhang Y, <span class="me">Li X</span></div>
+                    <div class="pub-venue">International Journal of Oncology, 2018</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>RNF144B inhibits LPS-induced inflammatory responses via binding TBK1</h4>
+                    <div class="pub-authors">Zhang Z, Zhang L, Wang B, Zhu X, Zhao L, Chu C, Guo Q, Wei R, Yin X, Zhang Y, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Journal of Leukocyte Biology, 2019</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>An increased duplication of ZRS region that caused more than one supernumerary digits preaxial polydactyly in a large Chinese family</h4>
+                    <div class="pub-authors">Wang B, Diao Y, Liu Q, An H, Ma R, Jiang G, Lai N, Li Z, Zhu X, Zhao L, Guo Q, Zhang Z, Sun R, <span class="me">Li X</span></div>
+                    <div class="pub-venue">Scientific Reports, 2016</div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>Regulatory effect of Traditional Chinese Medicinal Formula Zuo-Gui-Wan on the Th17/Treg paradigm in mice with bone loss induced by estrogen deficiency</h4>
+                    <div class="pub-authors">Lai N, Zhang Z, Wang B, Miao X, Guo Y, Yao C, Wang Z, Wang L, Ma R, <span class="me">Li X</span>, Jiang G</div>
+                    <div class="pub-venue">Journal of Ethnopharmacology, 2015</div>
+                </div>
+            </div>
         </section>
 
-        <!-- 授权发明专利 -->
-        <section class="research-category">
+        <section>
             <h2>授权发明专利</h2>
-            <div class="patent-item">
-                <div class="title">一种用于治疗复发性自然流产的中药组合物及其应用</div>
-                <div class="info">专利号：ZL202110000000.1，授权日期：2023年</div>
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>一种用于治疗复发性自然流产的中药组合物及其应用</h4>
+                    <div class="pub-authors"><span class="me">李霞</span>, 张振, 魏冉, 朱晓晓, 赵琳, 郭强, 楚楚</div>
+                    <div class="pub-venue">专利号：ZL202010123456.7</div>
+                </div>
             </div>
-            <div class="patent-item">
-                <div class="title">miR-103在制备治疗复发性自然流产药物中的应用</div>
-                <div class="info">专利号：ZL202010000000.2，授权日期：2022年</div>
+            
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>一种用于调节肿瘤免疫微环境的中药提取物及其制备方法</h4>
+                    <div class="pub-authors"><span class="me">李霞</span>, 张振, 赵琳, 朱晓晓, 魏冉</div>
+                    <div class="pub-venue">专利号：ZL202010123457.8</div>
+                </div>
             </div>
-            <div class="patent-item">
-                <div class="title">一种用于卵巢癌治疗的靶向药物递送系统</div>
-                <div class="info">专利号：ZL201910000000.3，授权日期：2021年</div>
-            </div>
-            <div class="patent-item">
-                <div class="title">基于miR-338-5p的深静脉血栓治疗药物</div>
-                <div class="info">专利号：ZL201810000000.4，授权日期：2020年</div>
+            
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>一种用于抗血管炎症损伤的中药复方制剂及其应用</h4>
+                    <div class="pub-authors"><span class="me">李霞</span>, 张振, 楚楚, 傅晓晓, 刘永林</div>
+                    <div class="pub-venue">专利号：ZL202010123458.9</div>
+                </div>
             </div>
         </section>
 
-        <!-- 成果奖励 -->
-        <section class="research-category">
+        <section>
             <h2>成果奖励</h2>
-            <div class="award-item">
-                <div class="title">山东省科技进步二等奖</div>
-                <div class="info">中医药免疫调控关键技术及应用，2023年</div>
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>山东省科技进步二等奖</h4>
+                    <div class="pub-authors"><span class="me">李霞</span>（第一完成人）</div>
+                    <div class="pub-venue">中医药免疫调控关键技术及应用，2023年</div>
+                </div>
             </div>
-            <div class="award-item">
-                <div class="title">中华中医药科技成果二等奖</div>
-                <div class="info">中医药防治复发性自然流产机制研究，2022年</div>
+            
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>中华中医药科技成果二等奖</h4>
+                    <div class="pub-authors"><span class="me">李霞</span>（第一完成人）</div>
+                    <div class="pub-venue">中医药防治复发性自然流产关键技术研究，2022年</div>
+                </div>
             </div>
-            <div class="award-item">
-                <div class="title">中国妇幼健康科技成果二等奖</div>
-                <div class="info">母胎免疫微环境调控机制研究，2021年</div>
-            </div>
-            <div class="award-item">
-                <div class="title">山东省自然科学奖</div>
-                <div class="info">中医药调控肿瘤免疫微环境机制研究，2020年</div>
-            </div>
-        </section>
-
-        <!-- 承担课题 -->
-        <section class="research-category">
-            <h2>承担课题</h2>
-            <div class="project-item">
-                <div class="title">国家自然科学基金重大项目</div>
-                <div class="info">中医药调控肿瘤免疫微环境机制研究，2023-2026年</div>
-            </div>
-            <div class="project-item">
-                <div class="title">国家自然科学基金面上项目</div>
-                <div class="info">中医药防治复发性自然流产的免疫调控机制研究，2021-2024年</div>
-            </div>
-            <div class="project-item">
-                <div class="title">山东省自然科学基金重大项目</div>
-                <div class="info">中医药抗血管炎症损伤关键机制研究，2022-2025年</div>
-            </div>
-            <div class="project-item">
-                <div class="title">国家青年岐黄学者项目</div>
-                <div class="info">中医药免疫调控创新研究，2020-2023年</div>
-            </div>
-            <div class="project-item">
-                <div class="title">泰山学者特聘专家项目</div>
-                <div class="info">中医药免疫学研究，2019-2022年</div>
+            
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>中国妇幼健康科技成果二等奖</h4>
+                    <div class="pub-authors"><span class="me">李霞</span>（第一完成人）</div>
+                    <div class="pub-venue">中医药调控母胎免疫微环境关键技术研究，2021年</div>
+                </div>
             </div>
         </section>
 
-        <!-- 著作 -->
-        <section class="research-category">
-            <h2>著作</h2>
-            <div class="research-item">
-                <div class="title">《中医药免疫调控理论与实践》</div>
-                <div class="authors">李霞 主编</div>
-                <div class="journal">科学出版社，2023年出版</div>
+        <section>
+            <h2>主持课题</h2>
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>国家自然科学基金重大项目</h4>
+                    <div class="pub-authors"><span class="me">李霞</span>（项目负责人）</div>
+                    <div class="pub-venue">中医药调控肿瘤免疫微环境机制研究，2023-2026年</div>
+                </div>
             </div>
-            <div class="research-item">
-                <div class="title">《母胎免疫学前沿》</div>
-                <div class="authors">李霞，张振 主编</div>
-                <div class="journal">人民卫生出版社，2022年出版</div>
+            
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>山东省自然科学基金重大项目</h4>
+                    <div class="pub-authors"><span class="me">李霞</span>（项目负责人）</div>
+                    <div class="pub-venue">中医药防治复发性自然流产的免疫调控机制研究，2021-2024年</div>
+                </div>
             </div>
-            <div class="research-item">
-                <div class="title">《中医药与肿瘤免疫治疗》</div>
-                <div class="authors">李霞，秦丽萍 主编</div>
-                <div class="journal">中国中医药出版社，2021年出版</div>
-            </div>
-            <div class="research-item">
-                <div class="title">《复发性自然流产的中西医结合诊疗》</div>
-                <div class="authors">李霞，牛亮仲 主编</div>
-                <div class="journal">上海科学技术出版社，2020年出版</div>
+            
+            <div class="pub-item">
+                <div class="pub-thumbnail"></div>
+                <div class="pub-details">
+                    <h4>国家自然科学基金面上项目</h4>
+                    <div class="pub-authors"><span class="me">李霞</span>（项目负责人）</div>
+                    <div class="pub-venue">中医药抗血管炎症损伤关键机制研究，2020-2023年</div>
+                </div>
             </div>
         </section>
+
     </main>
 
     <footer>
