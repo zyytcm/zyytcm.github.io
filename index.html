@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中医药免疫研究团队 - 首页</title>
     <link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ===== 首页整体科技学术风 ===== */
+
+.hero {
+margin-top: 32px;   /* ⭐ 控制与导航栏的距离 */
+
+    background:
+        radial-gradient(1000px 500px at 50% -200px,
+            rgba(100, 150, 255, 0.25),
+            transparent 60%),
+        linear-gradient(135deg, #0f2544, #1b3a6b);
+    border-radius: 24px;
+    padding:40px 40px 40px;   /* ← 关键：收紧上下 */
+    color: #fff;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 44px;      /* 原来 48px */
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 14px; /* 原来 20px */
+}
+
+.hero p {
+    font-size: 17px;     /* 原来 18px */
+    opacity: 0.85;
+}
+</style>
+
 </head>
 <body>
     <header>
@@ -27,121 +56,7 @@
         <section class="hero">
             <h1>欢迎来到中医药免疫研究团队</h1>
             <p>探索中医药免疫调控的前沿科学</p>
-            
-            <div class="hero-disciplines">
-                <div class="discipline-item">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                            <path d="M12 2a10 10 0 0 1 0 20c-2.5 0-5-2-5-5 0-2.5 2.5-4 5-5 2.5 0 5-2.5 5-5 0-2.5-2.5-5-5-5z" fill="currentColor" opacity="0.5"/>
-                            <circle cx="12" cy="7" r="1.5" fill="currentColor" />
-                            <circle cx="12" cy="17" r="1.5" fill="var(--primary-color)" />
-                        </svg>
-                    </div>
-                    <span>中医学</span>
-                </div>
-                
-                <div class="discipline-item">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M2 22s5-3 10-10a10 10 0 0 0-3-10l-.5.5" />
-                            <path d="M12 12l9.5-3" />
-                            <path d="M16 16l4 4" />
-                        </svg>
-                    </div>
-                    <span>中药学</span>
-                </div>
-
-                <div class="discipline-item">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2v8" />
-                            <path d="M12 10l-6-4" />
-                            <path d="M12 10l6-4" />
-                            <path d="M12 22v-8" />
-                            <path d="M12 14l-6 4" />
-                            <path d="M12 14l6 4" />
-                            <circle cx="12" cy="12" r="3" />
-                        </svg>
-                    </div>
-                    <span>免疫学</span>
-                </div>
-
-                <div class="discipline-item">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 20c5.333-6 5.333-12 0-18" />
-                            <path d="M14 20c-5.333-6-5.333-12 0-18" />
-                            <line x1="7" y1="17" x2="17" y2="17" />
-                            <line x1="7" y1="7" x2="17" y2="7" />
-                            <line x1="8.5" y1="12" x2="15.5" y2="12" />
-                        </svg>
-                    </div>
-                    <span>遗传学</span>
-                </div>
-
-                <div class="discipline-item">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="18" cy="5" r="3" />
-                            <circle cx="6" cy="12" r="3" />
-                            <circle cx="18" cy="19" r="3" />
-                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
-                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
-                        </svg>
-                    </div>
-                    <span>分子生物学</span>
-                </div>
-
-                <div class="discipline-item">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            <path d="M8 11h8" />
-                            <path d="M12 7v8" />
-                        </svg>
-                    </div>
-                    <span>生物医学工程</span>
-                </div>
-
-                <div class="discipline-item">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 2v7.31" />
-                            <path d="M14 2v7.31" />
-                            <path d="M8.5 2h7" />
-                            <path d="M14 9.3a6.5 6.5 0 1 1-4 0" />
-                            <path d="M5.52 16h12.96" />
-                        </svg>
-                    </div>
-                    <span>化学与材料</span>
-                </div>
-
-                <div class="discipline-item">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="4 17 10 11 14 15 20 9" />
-                            <line x1="12" y1="19" x2="12" y2="21" />
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                        </svg>
-                    </div>
-                    <span>生物信息学</span>
-                </div>
-
-                <div class="discipline-item">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-                            <line x1="6" y1="6" x2="6.01" y2="6" />
-                            <line x1="6" y1="18" x2="6.01" y2="18" />
-                        </svg>
-                    </div>
-                    <span>人工智能</span>
-                </div>
-            </div>
-        </section>
-
+</section>
         <section id="team-photo">
             <div style="text-align: center; margin: 30px 0;">
                 <img src="课题组合影_20230718_compressed.jpg" alt="课题组合影" style="max-width: 100%; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
@@ -183,6 +98,14 @@
             </p>
             
             <article class="news-item">
+                <h3><a href="#">Lactate dehydrogenase B facilitates disulfidptosis and exhaustion of tumour-infiltrating CD8+ T cells</a></h3>
+                <p>
+                    <span class="news-date">2025</span>
+                    团队研究成果发表于Nature Cell Biology期刊，影响因子19.1，并列通讯作者。
+                </p>
+            </article>
+
+            <article class="news-item">
                 <h3><a href="#">USP47 inhibits m6A-dependent c-Myc translation to maintain regulatory T cell metabolic and functional homeostasis</a></h3>
                 <p>
                     <span class="news-date">2023</span>
@@ -198,15 +121,7 @@
                 </p>
             </article>
 
-            <article class="news-item">
-                <h3><a href="#">IL-6 Contributes to Deep Vein Thrombosis and Is Negatively Regulated by miR-338-5p</a></h3>
-                <p>
-                    <span class="news-date">2020</span>
-                    团队研究成果发表于Arteriosclerosis, Thrombosis, and Vascular Biology期刊，影响因子10.514，通讯作者。
-                </p>
-            </article>
-            
-            <div style="text-align: right; margin-top: 20px;">
+                      <div style="text-align: right; margin-top: 20px;">
                 <a href="publications.html" style="font-weight: 600; color: var(--primary-light);">查看全部科研成果 &rarr;</a>
             </div>
         </section>

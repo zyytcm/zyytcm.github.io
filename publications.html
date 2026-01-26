@@ -58,6 +58,182 @@
             color: var(--primary-color);
         }
     </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Publications</title>
+
+    <style>
+        /* ===== Publication layout ===== */
+        .pub-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        /* ===== 高级论文缩略图 ===== */
+        .pub-thumbnail {
+            position: relative;
+            width: 46px;
+            height: 58px;
+            margin-right: 18px;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+            flex-shrink: 0;
+        }
+
+        /* 折角 */
+        .pub-thumbnail::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #c7d2fe, #6366f1);
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+        }
+
+        /* 中央符号 */
+        .pub-thumbnail::after {
+            content: "⧉";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: #4f46e5;
+            font-weight: 600;
+        }
+
+        .me {
+            font-weight: 600;
+            color: #dc2626;
+        }
+    </style>
+<style>
+/* ===== 通用 section 样式 ===== */
+.section {
+    margin: 64px 0;
+}
+
+.section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    border-left: 4px solid #6366f1;
+    padding-left: 12px;
+}
+
+/* ===== 卡片结构 ===== */
+.item-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    margin-bottom: 16px;
+}
+
+/* ===== 缩略图（统一基础） ===== */
+.item-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    margin-right: 16px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.item-icon::after {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ===== 各板块差异化风格 ===== */
+
+/* SCI 论文 */
+.section-publications .item-icon {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+.section-publications .item-icon::after {
+    content: "⧉";
+}
+
+/* 专著 */
+.section-books .item-icon {
+    background: linear-gradient(135deg, #059669, #047857);
+}
+.section-books .item-icon::after {
+    content: "▤";
+}
+
+/* 奖励 */
+.section-awards .item-icon {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+.section-awards .item-icon::after {
+    content: "★";
+}
+/* ===== 近五年主持课题 ===== */
+.section-projects .item-icon {
+    background: linear-gradient(135deg, #1e40af, #1e3a8a);
+}
+.section-projects .item-icon::after {
+    content: "▣";
+}
+
+/* ===== 实验室平台建设 ===== */
+.section-platform .item-icon {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+.section-platform .item-icon::after {
+    content: "⬢";
+}
+
+/* ===== 指导学术大赛 ===== */
+.section-competition .item-icon {
+    background: linear-gradient(135deg, #0ea5e9, #2563eb);
+}
+.section-competition .item-icon::after {
+    content: "▲";
+}
+
+/* ===== 参编指南 ===== */
+.section-guideline .item-icon {
+    background: linear-gradient(135deg, #64748b, #475569);
+}
+.section-guideline .item-icon::after {
+    content: "≡";
+}
+
+/* ===== 获得荣誉称号 ===== */
+.section-honor .item-icon {
+    background: linear-gradient(135deg, #ca8a04, #a16207);
+}
+.section-honor .item-icon::after {
+    content: "✦";
+}
+
+/* 专利 */
+.section-patents .item-icon {
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+.section-patents .item-icon::after {
+    content: "⌬";
+}
+</style>
+
+</head>
+
 </head>
 <body>
     <header>
@@ -82,1132 +258,1231 @@
             <p>团队长期致力于中医药免疫调控研究，在多个领域取得重要突破</p>
         </section>
 
-        <section>
+        <section class="section section-publications">
             <h2>近五年发表SCI论文</h2>
             
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>MIR937 amplification potentiates ovarian cancer progression by attenuating FBXO16 inhibition on ULK1-mediated autophagy</h4>
-                    <div class="pub-authors">Zhang Z, Liu X, Chu C, Zhang Y, Li W, Yu X, Han Q, Sun H, Zhang Y, Zhu X, Chen L, Wei R, Fan N, Zhou M, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Cell Death & Disease, 2024</div>
-                </div>
-            </div>
+<div class="item-card">
+    <div class="item-icon"></div>
+    <div class="item-content">
+        <h4>Lactate dehydrogenase B facilitates disulfidptosis and exhaustion of tumour-infiltrating CD8+ T cells</h4>
+        <div class="item-meta"> Wan  J, Shi  J. H, Shi  M, Huang  H, Zhang  Z, Li  W, Guo  C, Bao  R, Yu  X, Han  Q, Du  X, Li  S, Ye  Y, Cui  X*, <span class="me">Li X*</span>, Li  J. H*, Zou  Q* </div>
+        <div class="item-sub">Nature Cell Biology, 2025</div>
+    </div>
+</div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>Research Progress on the STAT Signaling Pathway in Pregnancy and Pregnancy-Associated Disorders</h4>
-                    <div class="pub-authors">Li L, Zhang Z, Li H, Zhou M, Li F, Chu C, Zhang Y, Zhu X, Jiu H*, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Frontiers in Immunology, 2024</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>Fluorescence imaging sheds light on the immune evasion mechanisms of hepatic stellate cells mediated by superoxide anion</h4>
-                    <div class="pub-authors">Mao Y, Wu C, Wang X, Zhang F, Qi X, Li X, Li Q</div>
-                    <div class="pub-venue">Communications Biology, 2024</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>Si-Miao-Yong-An Decoction alleviates thromboangiitis obliterans by regulating miR-548j-5p/IL-17A signaling pathway</h4>
-                    <div class="pub-authors">Chu C, Sun S, Zhang Z, Wu Q, Li H, Liang G, Jiang H, Gao Y, Zhang Y, Wang B, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Chinese Journal of Natural Medicines, 2024</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>Emerging role of miRNAs, lncRNAs, and circRNAs in pregnancy-associated diseases</h4>
-                    <div class="pub-authors">Fu X, Li Y, Zhang Z, Wang B, Wei R, Chu C, Xu K, Li L, Liu Y, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Chinese Medical Journal, 2023</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+ <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>USP47 inhibits m6A-dependent c-Myc translation to maintain regulatory T cell metabolic and functional homeostasis</h4>
-                    <div class="pub-authors">Wang A, Huang H, Shi JH, Yu X, Ding R, Zhang Y, Han Q, Ni ZY*, <span class="me">Li X</span>, Zhao R*, Zou Q*</div>
-                    <div class="pub-venue">Journal of Clinical Investigation, 2023</div>
+                    <div class="item-meta">Wang A, Huang H, Shi JH, Yu X, Ding R, Zhang Y, Han Q, Ni ZY, <span class="me">Li X</span>, Zhao R, Zou Q*</div>
+                    <div class="item-sub">Journal of Clinical Investigation, 2023</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>miR-513c-5p suppression aggravates pyroptosis of endothelial cell in deep venous thrombosis by promoting caspase-1</h4>
-                    <div class="pub-authors">Chu C, Wang B, Zhang Z, Liu W, Sun S, Liang G, Zhang X, An H, Wei R, Zhu X, Guo Q, Zhao L, Fu X, Xu K, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Frontiers in Cell and Developmental Biology, 2022</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>The emerging roles of TLR and cGAS signaling in tumorigenesis and progression of ovarian cancer</h4>
-                    <div class="pub-authors">Zhang Z, Zhao H, Chu C, Fu X, Liu Y, Wang L, Wei R, Xu K, Li L, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Frontiers in Pharmacology, 2022</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>Diminished miR374c5p negatively regulates IL-6 in unexplained recurrent spontaneous abortion</h4>
-                    <div class="pub-authors">Zhao L, Han L, Hei GO, Wei R, Zhang Z, Zhu X, Guo Q, Chu C, Fu X, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Journal of Molecular Medicine, 2022</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>Increased miR-6875-5p inhibits plasmacytoid dendritic cell differentiation via the STAT3/E2-2 pathway in recurrent spontaneous abortion</h4>
-                    <div class="pub-authors">Zhu X, Yin X，Hei G, Wei R, Guo Q, Zhao L, Zhang Z, Chu C, Fu X, Xu K, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Molecular Human Reproduction, 2021</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>miR-130b-3p regulates M1 macrophage polarization via targeting IRF1</h4>
-                    <div class="pub-authors">Guo Q, Zhu X, Wei R, Zhao L, Zhang Z, Yin X, Zhang Y, Chu C, Wang B*, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Journal of Cellular Physiology, 2021</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>Dendritic cells in pregnancy and pregnancy-associated diseases</h4>
-                    <div class="pub-authors">Wei R, Lai N, Zhao L, Zhang Z, Zhu X, Guo Q, Chu C, Fu X, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Biomedicine & Pharmacotherapy, 2021</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>MiR-19a-3p Suppresses M1 Macrophage Polarization by Inhibiting STAT1/IRF1 Pathway</h4>
-                    <div class="pub-authors">Zhu X, Guo Q, Zou J, Wang B, Zhang Z, Wei R, Zhao L, Zhang Y, Chu C, Fu X, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Frontiers in Pharmacology, 2021</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>miR-374b-5p is increased in deep vein thrombosis and negatively targets IL-10</h4>
-                    <div class="pub-authors">Zhang Y, Miao X, Zhang Z, Wei R, Sun S, Liang G, Li H, Chu C, Zhao L, Zhu X, Guo Q, Wang B, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Journal of Molecular and Cellular Cardiology, 2020</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>MiR-103 protects from recurrent spontaneous abortion via inhibiting STAT1 mediated M1 macrophage polarization</h4>
-                    <div class="pub-authors">Zhu X, Liu H, Zhang Z, Wei R, Zhou X, Wang Z, Zhao L, Guo Q, Zhang Y, Chu C, Wang L*, <span class="me">Li X</span></div>
-                    <div class="pub-venue">International Journal of Biological Sciences, 2020</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>IL-6 Contributes to Deep Vein Thrombosis and Is Negatively Regulated by miR-338-5p</h4>
-                    <div class="pub-authors">Zhang Y, Zhang Z, Wei R, Miao X, Sun S, Liang G, Chu C, Zhao L, Zhu X, Guo Q, Wang B*, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Arteriosclerosis, Thrombosis, and Vascular Biology, 2020</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+ <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>MiR-337-3p suppresses proliferation of epithelial ovarian cancer by targeting PIK3CA and PIK3CB</h4>
-                    <div class="pub-authors">Zhang Z, Zhang L, Wang B, Wei R, Wang Y, Wan J, Zhang C, Zhao L, Zhu X, Zhang Y, Chu C, Guo Q, Yin X, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Cancer Letters, 2020</div>
+                    <div class="item-meta">Zhang Z, Zhang L, Wang B, Wei R, Wang Y, Wan J, Zhang C, Zhao L, Zhu X, Zhang Y, Chu C, Guo Q, Yin X, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Cancer Letters, 2020</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>Meta-analysis based gene expression profiling reveals functional genes in ovarian cancer</h4>
-                    <div class="pub-authors">Zhao L, Li Y, Zhang Z, Zou J, Li J, Wei R, Guo Q, Zhu X, Chu C, Fu X, Yue J*, <span class="me">Li X</span></div>
-                    <div class="pub-venue">Bioscience Reports, 2020</div>
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>MiR-103 protects from recurrent spontaneous abortion via inhibiting STAT1 mediated M1 macrophage polarization</h4>
+                    <div class="item-meta">Zhu  X, Liu  H, Zhang  Z, Wei  R, Zhou  X, Wang  Z, Zhao  L, Guo  Q, Zhang  Y, Chu  C, Wang  L*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">International Journal of Biological Sciences, 2020</div>
                 </div>
             </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>MIR937 amplification potentiates ovarian cancer progression by attenuating FBXO16 inhibition on ULK1-mediated autophagy</h4>
+                    <div class="item-meta">Zhang Z, Liu X, Chu C, Zhang Y, Li W, Yu X, Han Q, Sun H, Zhang Y, Zhu X, Chen L, Wei R, Fan N, Zhou M, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Cell Death & Disease, 2024</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Targeting disulfidptosis for ovarian cancer therapy induced by nanodrugs carrying 6-aminonicotinamide</h4>
+                    <div class="item-meta">Nanan Fan, Zhen Zhang, Huiyan Zu, Xinkui Liu, Bin Wang, Xiuming Miao, Chu Chu, Yunhong Zhang, Xiaoxiao Zhu, Ping Li*, <span class="me">Xia Li*</span></div>
+                    <div class="item-sub">Chinese Chemical Letter, 2025</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Bushen Guchong Decoction facilitates M2 polarization through JAK2/STAT3 for URSA treatment</h4>
+                    <div class="item-meta">Liu  Y, Liu  X, Zhu  X, Zhou  M, Chu  C, Zhang  Y, Li  W, Song  W, Qin  L, Shi  F, Niu  L, Kikete  S, Zhang  Z, Zhang  M, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Phytomedicine:International Journal of Phytotherapy and Phytopharmacology, 2025</div>
+                </div>
+            </div>
+
+ <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Dendritic cells in pregnancy and pregnancy-associated diseases</h4>
+                    <div class="item-meta">Wei R, Lai N, Zhao L, Zhang Z, Zhu X, Guo Q, Chu C, Fu X, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Biomedicine & Pharmacotherapy, 2021</div>
+                </div>
+            </div>
+
+ <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>IL-6 Contributes to Deep Vein Thrombosis and Is Negatively Regulated by miR-338-5p</h4>
+                    <div class="item-meta">Zhang Y, Zhang Z, Wei R, Miao X, Sun S, Liang G, Chu C, Zhao L, Zhu X, Guo Q, Wang B*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Arteriosclerosis, Thrombosis, and Vascular Biology, 2020</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>NAT10-mediated ac4C-modification exacerbates ferroptosis by stabilizing HMOX1 in Deep vein thrombosis</h4>
+                    <div class="item-meta">Zhang  Y, Zhang  Z, Liu  X, Chu  C, Yu  X, Han  Q, Li  W, Zhang  T, Zu  H, Fan  N, Wei  R, Shi  F, Li  F, Xu  F, Wang  B*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Arteriosclerosis, Thrombosis, and Vascular Biology, 2025</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Emerging role of miRNAs, lncRNAs, and circRNAs in pregnancy-associated diseases</h4>
+                    <div class="item-meta">Fu X, Li Y, Zhang Z, Wang B, Wei R, Chu C, Xu K, Li L, Liu Y, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Chinese Medical Journal, 2023</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>miR-126-5p protects from URSA via inhibiting Caspase-1-dependent pyroptosis of trophoblast cells</h4>
+                    <div class="item-meta">Zhu  X, Xu  K, Ai  S, Zhang  Y, Chu  C, Wei  R, Gao  S, Liu  L, Li  W, Zhang  Y, Kikete  S, Liu  X, Zhang  Z*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Cellular and Molecular Life Sciences, 2025</div>
+                </div>
+            </div>
+
+ <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Research Progress on the STAT Signaling Pathway in Pregnancy and Pregnancy-Associated Disorders</h4>
+                    <div class="item-meta">Li L, Zhang Z, Li H, Zhou M, Li F, Chu C, Zhang Y, Zhu X, Jiu H*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Frontiers in Immunology, 2024</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Macrophage Tim-4 Protects Against Deep Vein Thrombosis by Binding CK2β to Suppress Inflammatory Responses</h4>
+                    <div class="item-meta">Wang  X, Zhang  Z, Zheng  W, Zhang  B, Chu  C, Chen  J, Liu  C, Xu  K, Yu  Z, Guo  Q, Zhao  S, Chen  X, Bai  F, Wang  B*, <span class="me">Li X*</span>, Liu  W*</div>
+                    <div class="item-sub">Frontiers in Immunology, 2025</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Fluorescence imaging sheds light on the immune evasion mechanisms of hepatic stellate cells mediated by superoxide anion</h4>
+                    <div class="item-meta">Mao Y, Wu C, Wang X*, Zhang F, Qi X, <span class="me">Li X*</span>, Li P*, Tang B*</div>
+                    <div class="item-sub">Communications Biology, 2024</div>
+                </div>
+            </div>
+
+ <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Si-Miao-Yong-An Decoction alleviates thromboangiitis obliterans by regulating miR-548j-5p/IL-17A signaling pathway</h4>
+                    <div class="item-meta">Chu C, Sun S, Zhang Z, Wu Q, Li H, Liang G, Jiang H, Gao Y, Zhang Y, Wang B*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Chinese Journal of Natural Medicines, 2024</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>The emerging roles of TLR and cGAS signaling in tumorigenesis and progression of ovarian cancer</h4>
+                    <div class="item-meta">Zhang Z, Zhao H, Chu C, Fu X, Liu Y, Wang L, Wei R, Xu K, Li L, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Frontiers in Pharmacology, 2022</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>MiR-19a-3p Suppresses M1 Macrophage Polarization by Inhibiting STAT1/IRF1 Pathway</h4>
+                    <div class="item-meta">Zhu X, Guo Q, Zou J, Wang B, Zhang Z, Wei R, Zhao L, Zhang Y, Chu C, Fu X, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Frontiers in Pharmacology, 2021</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>miR-374b-5p is increased in deep vein thrombosis and negatively targets IL-10</h4>
+                    <div class="item-meta">Zhang Y, Miao X, Zhang Z, Wei R, Sun S, Liang G, Li H, Chu C, Zhao L, Zhu X, Guo Q, Wang B*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Journal of Molecular and Cellular Cardiology, 2020</div>
+                </div>
+            </div>
+
+ <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Meta-analysis based gene expression profiling reveals functional genes in ovarian cancer</h4>
+                    <div class="item-meta">Zhao L, Li Y, Zhang Z, Zou J, Li J, Wei R, Guo Q, Zhu X, Chu C, Fu X, Yue J*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Bioscience Reports, 2020</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>miR-513c-5p suppression aggravates pyroptosis of endothelial cell in deep venous thrombosis by promoting caspase-1</h4>
+                    <div class="item-meta">Chu C, Wang B, Zhang Z, Liu W, Sun S, Liang G, Zhang X, An H, Wei R, Zhu X, Guo Q, Zhao L, Fu X, Xu K, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Frontiers in Cell and Developmental Biology, 2022</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Diminished miR374c5p negatively regulates IL-6 in unexplained recurrent spontaneous abortion</h4>
+                    <div class="item-meta">Zhao L, Han L, Hei GO, Wei R, Zhang Z, Zhu X, Guo Q, Chu C, Fu X, Ke Xu*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Journal of Molecular Medicine, 2022</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Jinbei Decoction Attenuates LPS-Induced Acute Lung Injury via Suppression of TRAF6-Dependent Inflammatory Response in Macrophage</h4>
+                    <div class="item-meta">Li  W, Zhang  A, Cai  Y, Sun  H, Teng  Y, Meng  Z, Zhou  W, Liu  R, Zhang  Z*, Tian  J*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Journal of Cellular and Molecular Medicine, 2025</div>
+                </div>
+            </div>
+
+ <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>miR-130b-3p regulates M1 macrophage polarization via targeting IRF1</h4>
+                    <div class="item-meta">Guo Q, Zhu X, Wei R, Zhao L, Zhang Z, Yin X, Zhang Y, Chu C, Wang B*, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Journal of Cellular Physiology, 2021</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>The Role of Dendritic Cell Subsets in Recurrent Spontaneous Abortion and the Regulatory Effect of Baicalin on It</h4>
+                    <div class="item-meta">Lai  N, Fu  X, Hei  G, Song  W, Wei  R, Zhu  X, Guo  Q, Zhang  Z, Chu  C, Xu  K, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Journal of Immunology Research, 2022</div>
+                </div>
+            </div>
+
+<div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>Increased miR-6875-5p inhibits plasmacytoid dendritic cell differentiation via the STAT3/E2-2 pathway in recurrent spontaneous abortion</h4>
+                    <div class="item-meta">Zhu X, Yin X, Hei G, Wei R, Guo Q, Zhao L, Zhang Z, Chu C, Fu X, Xu K, <span class="me">Li X*</span></div>
+                    <div class="item-sub">Molecular Human Reproduction, 2021</div>
+                </div>
+            </div>
+
         </section>
 
-        <section>
+        <section class="section section-books">
             <h2>参编著作</h2>
             
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>复方苦参抗肿瘤精准网络药理学研究</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（执行副主编）</div>
-                    <div class="pub-venue">中国中医药出版社，2024年11月出版</div>
+                    <div class="item-meta"><span class="me">李霞</span>（执行副主编）</div>
+                    <div class="item-sub">中国中药出版社，2024年11月出版</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>实用中西医生殖医学</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（副主编）</div>
-                    <div class="pub-venue">中医古籍出版社，2019年7月出版</div>
+                    <div class="item-meta"><span class="me">李霞</span>（副主编）</div>
+                    <div class="item-sub">中医古籍出版社，2019年7月出版</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>下肢静脉曲张防治答疑</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（编委）</div>
-                    <div class="pub-venue">人民军医出版社，2010年12月出版</div>
+                    <div class="item-meta"><span class="me">李霞</span>（编委）</div>
+                    <div class="item-sub">人民军医出版社，2010年12月出版</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>不孕症中医名人名著医案导读</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（编委）</div>
-                    <div class="pub-venue">人民军医出版社，2008年12月出版</div>
+                    <div class="item-meta"><span class="me">李霞</span>（编委）</div>
+                    <div class="item-sub">人民军医出版社，2008年12月出版</div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="section section-awards">
             <h2>成果奖励</h2>
             
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>国际化办学助力齐鲁中医药文化国际传播</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第3位）</div>
-                    <div class="pub-venue">2024年度齐鲁中医药文化研究优秀成果一等奖，2024年</div>
+           <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中医药表观免疫调控防治原因不明复发性流产体系的建立与应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">中华中医药学会科学技术二等奖，2025年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>基于表观遗传母胎免疫调控研究复发性自然流产发病机制及中医药干预应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">中国中西医结合学会科学技术二等奖，2023年</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>补肾法重塑母胎免疫耐受防治原因不明复发性流产技术构建与应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">第六届（2025）妇幼健康科学技术奖二等奖，2025年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>中药表观免疫调控治疗复发性自然流产技术创新与应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">中国民族医药学会科学技术二等奖，2023年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">中国民族医药学会科学技术二等奖，2023年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中医药靶向非编码RNA调控母胎免疫耐受关键技术创新与应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东中西医结合科学技术一等奖，2023年</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>基于表观遗传母胎免疫调控研究复发性自然流产发病机制及中医药干预应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">中国中西医结合学会科学技术二等奖，2023年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>山东中医药大学教学成果奖：科教融合、中西融汇，中西医临床医学拔尖创新人才培养</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东中医药大学教学成果奖，2023年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>化瘀清热利湿法免疫调控治疗深静脉血栓关键技术创新及推广应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第3位）</div>
-                    <div class="pub-venue">山东省科技进步奖二等奖，2022年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>温经化瘀止痛法治疗原发性痛经的内分泌-免疫机制及临床应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第3位）</div>
-                    <div class="pub-venue">全国妇幼健康科学技术奖三等奖，2021年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>温经化瘀止痛法治疗原发性痛经的内分泌-免疫机制及临床应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第5位）</div>
-                    <div class="pub-venue">中国民族医药学会科学技术三等奖，2020年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中药生殖免疫调控关键技术及应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东省高等学校科学技术二等奖，2020年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中医药免疫调控治疗深静脉血栓关键技术及应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第4位）</div>
-                    <div class="pub-venue">山东中医药科技进步一等奖，2020年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>中医药调控母胎免疫耐受与排斥关键技术及应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">中华中医药学会科学技术二等奖，2018年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">中华中医药学会科学技术二等奖，2018年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>白血病细胞及其微环境血管内皮细胞的靶向诱导干预作用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第2位）</div>
-                    <div class="pub-venue">中华医学科技三等奖，2016年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">中华医学科技三等奖，2016年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中药生殖免疫调控物质基础及关键机制研究</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东中医药科学技术一等奖，2016年</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>温经化瘀止痛法治疗原发性痛经的内分泌-免疫机制及临床应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第3位）</div>
+                    <div class="item-sub">全国妇幼健康科学技术奖三等奖，2021年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>中药及其活性提取物的免疫调控关键技术与抗肿瘤作用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第3位）</div>
-                    <div class="pub-venue">中华中医药学会科学技术三等奖，2015年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第3位）</div>
+                    <div class="item-sub">中华中医药学会科学技术三等奖，2015年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>基因工程药物高效制备关键技术与转化</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第2位）</div>
-                    <div class="pub-venue">2014年度济南市"讲理想、比贡献"活动优秀创新项目，2015年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中药靶向干预T细胞亚群减轻药物流产后子宫出血</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东省科技进步二等奖，2015年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>表观遗传学的免疫调控关键机制及其抗肿瘤作用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第8位）</div>
-                    <div class="pub-venue">中华医学科技三等奖，2014年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中药调节T细胞亚群偏移及其在干预药物流产后子宫出血中的作用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东省自然科学学术创新三等奖，2014年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中药调节T细胞亚群偏移及其在干预药物流产后子宫出血中的作用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东医学科技创新成果三等奖，2014年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中药及其活性提取物的免疫调控关键技术与抗肿瘤作用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第4位）</div>
-                    <div class="pub-venue">山东医学科技创新成果二等奖，2014年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中药调控免疫的关键机制与物质基础研究</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第4位）</div>
-                    <div class="pub-venue">山东中医药科学技术一等奖，2014年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>深静脉血栓形成中T细胞亚群失衡及中药干预机制研究</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第2位）</div>
-                    <div class="pub-venue">山东中医药科学技术三等奖，2014年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>化瘀补虚清热法逆转T细胞亚群失衡减轻药物流产后子宫出血作用研究</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东中医药科学技术二等奖，2014年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中药调节T细胞亚群偏移及其在干预药物流产后子宫出血中的作用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东省医科院科技成果二等奖，2013年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>祛瘀清热扶正法防治节育措施致异常子宫出血临床及机理系列研究</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第4位）</div>
-                    <div class="pub-venue">中华中医药学会科学技术奖三等奖，2009年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第4位）</div>
+                    <div class="item-sub">中华中医药学会科学技术奖三等奖，2009年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>温经化瘀止痛法治疗原发性痛经的内分泌-免疫机制及临床应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第5位）</div>
+                    <div class="item-sub">中国民族医药学会科学技术三等奖，2020年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>表观遗传学的免疫调控关键机制及其抗肿瘤作用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第8位）</div>
+                    <div class="item-sub">中华医学科技三等奖，2014年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>基于补肾固冲理论中医药重塑母胎免疫耐受关键技术建立及转化应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东中医药科学技术一等奖，2025年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中医药靶向非编码RNA调控母胎免疫耐受关键技术创新与应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东中西医结合科学技术一等奖，2023年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中药生殖免疫调控物质基础及关键机制研究</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东中医药科学技术一等奖，2016年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中药靶向干预T细胞亚群减轻药物流产后子宫出血</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东省科技进步二等奖，2015年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中药调节T细胞亚群偏移及其在干预药物流产后子宫出血中的作用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东省自然科学学术创新三等奖，2014年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中药调节T细胞亚群偏移及其在干预药物流产后子宫出血中的作用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东医学科技创新成果三等奖，2014年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>化瘀补虚清热法逆转T细胞亚群失衡减轻药物流产后子宫出血作用研究</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东中医药科学技术二等奖，2014年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中药调节T细胞亚群偏移及其在干预药物流产后子宫出血中的作用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东省医科院科技成果二等奖，2013年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>深静脉血栓形成中T细胞亚群失衡及中药干预机制研究</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">山东中医药科学技术三等奖，2014年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>国际化办学助力齐鲁中医药文化国际传播</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第3位）</div>
+                    <div class="item-sub">2024年度齐鲁中医药文化研究优秀成果一等奖，2024年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>化瘀清热利湿法免疫调控治疗深静脉血栓关键技术创新及推广应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第3位）</div>
+                    <div class="item-sub">山东省科技进步奖二等奖，2022年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中医药免疫调控治疗深静脉血栓关键技术及应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第4位）</div>
+                    <div class="item-sub">山东中医药科技进步一等奖，2020年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中药及其活性提取物的免疫调控关键技术与抗肿瘤作用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第4位）</div>
+                    <div class="item-sub">山东医学科技创新成果二等奖，2014年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中药调控免疫的关键机制与物质基础研究</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第4位）</div>
+                    <div class="item-sub">山东中医药科学技术一等奖，2014年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>祛瘀清热补虚法防治节育措施致异常子宫出血临床及机理系列研究</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第5位）</div>
-                    <div class="pub-venue">山东省科技进步奖三等奖，2009年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第5位）</div>
+                    <div class="item-sub">山东省科技进步奖三等奖，2009年</div>
                 </div>
             </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>基因工程药物高效制备关键技术与转化</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">2014年度济南市"讲理想、比贡献"活动优秀创新项目，2015年</div>
+                </div>
+            </div>
+
         </section>
 
-        <section>
+        <section class="section section-patents">
             <h2>授权发明专利</h2>
-            
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>miR-126-5p在不明原因复发性自然流产诊治中的应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，朱肖肖，张振，李昊阳，刘鑫馗，褚楚，张云虹，周苗苗，秦丽萍，范楠楠，牛亮仲，李莉华，李芳</div>
-                    <div class="pub-venue">中国发明专利号: ZL 202410045297.7，授权日期: 2024-12-20</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2024-12-20</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>四妙勇安汤调控 miR-548j-5p/IL-17A 信号轴在治疗脉管炎中的应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，王彬，李昊阳，张振，褚楚，张云虹，刘鑫馗，周苗苗，范楠楠，秦丽萍，牛亮仲，李莉华，李芳</div>
-                    <div class="pub-venue">中国发明专利号: ZL 202410047895.8，授权日期: 2024-11-08</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2024-11-08</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>MIR937基因组拷贝数扩增在卵巢癌诊断和/或治疗中的应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，张振，褚楚，刘鑫馗，孙浩宇，吕潇，周苗苗，朱肖肖，李莉华</div>
-                    <div class="pub-venue">中国发明专利号: ZL 202311804534.5，授权日期: 2024-08-02</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2024-08-02</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>一种卵巢癌CD8+T细胞相关预后评估方法、系统及其应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，刘鑫馗，张振，范楠楠，褚楚，周苗苗，朱肖肖，李莉华，乔梦玫，李薇</div>
-                    <div class="pub-venue">中国发明专利号: ZL 202311802494.0，授权日期: 2024-08-02</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>一种DNA纳米比率荧光探针及其在URSA检测中的应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，范楠楠，张振，刘鑫馗，褚楚，张云虹，李莉华，吕潇，周苗苗，朱肖肖，乔梦玫</div>
-                    <div class="pub-venue">中国发明专利号: ZL 202311815865.9，授权日期: 2024-08-02</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2024-08-02</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>一种卵巢癌CD8+T细胞相关预后评估方法、系统及其应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2024-08-02</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>血清中circ_0082660作为URSA诊断及妊娠结局评估标志物的应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，王彬，赵霖，张华，张云虹，尹训强，魏然，张振，朱肖肖，郭强</div>
-                    <div class="pub-venue">中国发明专利号: ZL 201810601009.6，授权日期: 2021-10-22</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2021-10-22</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>血清中circ_0079591作为URSA诊断及妊娠结局评估标志物的应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，王彬，赵霖，张华，张云虹，尹训强，魏然，张振，朱肖肖，郭强</div>
-                    <div class="pub-venue">中国发明专利号: ZL 201810602718.6，授权日期: 2021-10-22</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2021-10-22</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>血清中LncRNA作为URSA诊断及妊娠结局评估标志物的应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，王彬，赵霖，张华，张云虹，尹训强，魏然，张振，朱肖肖，郭强</div>
-                    <div class="pub-venue">中国发明专利号: ZL 201810602044.X，授权日期: 2021-10-12</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2021-10-12</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>血清中LncRNA作为URSA诊断及妊娠结局评估标志物的应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，王彬，赵霖，张华，魏然，尹训强，张云虹，张振，郭强，朱肖肖</div>
-                    <div class="pub-venue">中国发明专利号: ZL 201810602717.1，授权日期: 2021-10-08</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2021-10-08</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>血清中circ_0021132作为深静脉血栓形成诊断标志物的应用</h4>
-                    <div class="pub-authors">王彬，<span class="me">李霞</span>，刘明，赵霖，张云虹，张振，郝清智，朱肖肖，魏然，郭强，尹训强</div>
-                    <div class="pub-venue">中国发明专利号: ZL 201810489377.6，授权日期: 2021-04</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>血清中circ_0005396作为深静脉血栓形成诊断标志物的应用</h4>
-                    <div class="pub-authors">王彬，<span class="me">李霞</span>，刘明，赵霖，张云虹，张振，郝清智，朱肖肖，魏然，郭强，尹训强</div>
-                    <div class="pub-venue">中国发明专利号: ZL 201810490377.8，授权日期: 2021-04</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>一种LncRNA作为深静脉血栓形成诊断标志物的应用</h4>
-                    <div class="pub-authors">王彬，<span class="me">李霞</span>，刘明，赵霖，张云虹，张振，郝清智，朱肖肖，魏然，郭强，尹训强</div>
-                    <div class="pub-venue">中国发明专利号: ZL 201810490350.9，授权日期: 2021-08</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>一种LncRNA作为深静脉血栓形成诊断标志物的应用</h4>
-                    <div class="pub-authors">王彬，<span class="me">李霞</span>，刘明，赵霖，张云虹，张振，郝清智，朱肖肖，魏然，郭强，尹训强</div>
-                    <div class="pub-venue">中国发明专利号: ZL 201810489376.1，授权日期: 2021-08</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>一种治疗微小残留白血病的中药组合物</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">国家发明专利号: ZL 201410554501.4，授权日期: 2018-06</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2018-06</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>一种促进生长发育的药物组合物</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">国家发明专利号: ZL 20141079890.7，授权日期: 2016-10</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2016-10</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>一种治疗白血病中药组合及提取工艺</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第2位）</div>
-                    <div class="pub-venue">国家发明专利号: ZL 201410076050.8，授权日期: 2016-05</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>一种促进乳汁分泌的中药</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">国家发明专利号: ZL 201210472874.8，授权日期: 2014-02</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2014-02</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>一种防治不明原因复发性流产的中药及其制备方法</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">国家发明专利号: ZL 201310016972.5，授权日期: 2014-01</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">授权日期: 2014-01</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+             <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>一种骨折辅助复位外固定装置及制作方法</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">授权日期: 2025-12-02</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>血清中circ_0021132作为深静脉血栓形成诊断标志物的应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">授权日期: 2021-04</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>血清中circ_0005396作为深静脉血栓形成诊断标志物的应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">授权日期: 2021-04</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>一种LncRNA作为深静脉血栓形成诊断标志物的应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">授权日期: 2021-08</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>一种LncRNA作为深静脉血栓形成诊断标志物的应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">授权日期: 2021-08</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>一种治疗白血病中药组合及提取工艺</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">授权日期: 2016-05</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>一种防治雌激素缺乏导致骨丢失的中药及其制备方法</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第2位）</div>
-                    <div class="pub-venue">国家发明专利号: ZL 201310012310.0，授权日期: 2014-04</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第2位）</div>
+                    <div class="item-sub">授权日期: 2014-04</div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="section section-projects">
             <h2>近五年主持课题</h2>
             
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>补肾固冲汤靶向NSUN2调控TGFB1m5C修饰重塑母胎界面免疫耐受作用及机制研究</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">国家自然科学基金面上项目，82474564，2025年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">国家自然科学基金面上项目，2025年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>"教创融合、学科交叉"理念下的中西医结合拔尖创新型人才培养模式研究与实践</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东省教育厅2024年本科教学改革研究重点项目，Z2024231，2024年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>中医药免疫调控领军科创团队</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">2024年山东省卫生健康领军科创团队建设项目，2024年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>补肾固冲法靶向lnc-514235/mTOR调控巨噬细胞自噬治疗URSA的机制研究</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">国家自然科学基金面上项目，82274575，2023年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">国家自然科学基金面上项目，2023年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>基于表观遗传免疫调控探讨补肾固冲法治疗复发性自然流产关键机制与应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">国家中医药管理局科技司共建科技项目，GZY-KJS-SD-2023-034，2023年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>基于多组学交叉解析复发性自然流产表观遗传免疫调控及中药靶向干预机制</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东省自然科学基金重大基础研究项目，ZR2023ZD56，2023年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>山东省中医药高层次人才培育项目（领军人物）</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">2023年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>国家中医药管理局青年岐黄学者项目</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">2022年</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>基于环状RNA-0029966调控microRNA-185-5p/STAT5探讨补肾固冲法诱导母胎免疫耐受治疗复发性自然流产的作用与机制</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">国家自然科学基金面上项目，81873337，2019年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">国家自然科学基金面上项目，2019年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中非传统药物免疫调控关键技术研究与国际化应用</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东省重点研发计划（科技合作）项目，2025年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>"教创融合、学科交叉"理念下的中西医结合拔尖创新型人才培养模式研究与实践</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东省教育厅2024年本科教学改革研究重点项目，2024年</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>中医药免疫调控领军科创团队</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">2024年山东省卫生健康领军科创团队建设项目，2024年</div>
+                </div>
+            </div>
+
+           <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>基于多组学交叉解析复发性自然流产表观遗传免疫调控及中药靶向干预机制</h4>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东省自然科学基金重大基础研究项目，2023年</div>
+                </div>
+            </div>
+
+           <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>基于高通量多组学特征谱的卵巢癌关键驱动分子鉴定与精准靶向逆转</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">山东省中央引导地方科技发展资金项目，YDZX20203700001407，2020年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">山东省中央引导地方科技发展资金项目，2020年</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>circRNA/miRNA/mRNA信息轴调控母胎免疫耐受在复发性自然流产中的作用及中药靶向干预应用</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（第1位）</div>
-                    <div class="pub-venue">济南市科技局科研带头人工作室项目，2020GXRC050，2021年</div>
+                    <div class="item-meta"><span class="me">李霞</span>（第1位）</div>
+                    <div class="item-sub">济南市科技局科研带头人工作室项目，2021年</div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="section section-platform">
             <h2>实验室平台建设</h2>
             
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>中医药免疫调控山东省工程研究中心</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（负责人）</div>
-                    <div class="pub-venue">批准部门：山东省发改委，2024.06</div>
+                    <div class="item-meta"><span class="me">李霞</span>（负责人）</div>
+                    <div class="item-sub">批准部门：山东省发改委，2024.06</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>济南市中医药免疫调控重点实验室</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（负责人）</div>
-                    <div class="pub-venue">批准部门：济南市科技局，2024.05</div>
+                    <div class="item-meta"><span class="me">李霞</span>（负责人）</div>
+                    <div class="item-sub">批准部门：济南市科技局，2024.05</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>中医药表观遗传免疫调控济南市工程研究中心</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（负责人）</div>
-                    <div class="pub-venue">批准部门：济南市发展和改革委员会，2023.12</div>
+                    <div class="item-meta"><span class="me">李霞</span>（负责人）</div>
+                    <div class="item-sub">批准部门：济南市发展和改革委员会，2023.12</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>中医药免疫调控融合创新重点实验室</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（实验室负责人）</div>
-                    <div class="pub-venue">批准单位：山东省教育厅，2022.11</div>
+                    <div class="item-meta"><span class="me">李霞</span>（实验室负责人）</div>
+                    <div class="item-sub">批准单位：山东省教育厅，2022.11</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>中医药免疫交叉创新重点实验室</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>（实验室负责人）</div>
-                    <div class="pub-venue">批准单位：山东省卫生健康委员会，2022.10</div>
+                    <div class="item-meta"><span class="me">李霞</span>（实验室负责人）</div>
+                    <div class="item-sub">批准单位：山东省卫生健康委员会，2022.10</div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>指导本科生大赛</h2>
+        <section class="section section-competition">
+            <h2>指导学生竞赛</h2>
             
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>第八届全国大学生基础医学创新研究暨实验设计论坛总决赛本科组中医药创新研究赛道铜奖（国家级）</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>、褚楚</div>
-                    <div class="pub-venue">作品名称：消栓通脉汤调控miR-513c-5p/Caspase-1信号轴减轻血管内皮细胞焦亡治疗DVT机制研究，2022.12</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第九届中国国际"互联网+"大学生创新创业大赛国赛银奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：国家级；获奖时间：2023.12</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>第八届全国大学生基础医学创新研究暨实验设计论坛本科院校东部赛区复赛中医药赛道二等奖（省级）</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>、褚楚</div>
-                    <div class="pub-venue">作品名称：消栓通脉汤调控miR-513c-5p/Caspase-1信号轴减轻血管内皮细胞焦亡治疗DVT机制研究，2022.12</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第十一届全国大学生医学创新大赛暨2025"一带一路"国际竞赛总决赛基础临床赛道银奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：国家级；获奖时间：2025.08</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>第八届全国大学生基础医学创新研究暨实验设计论坛本科院校东部赛区复赛基础医学赛道三等奖（省级）</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>、魏然</div>
-                    <div class="pub-venue">作品名称：miR-26a-5p靶向ULK1调控滋养细胞自噬治疗URSA关键机制，2022.12</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第九届全国大学生基础医学创新研究暨实验设计论坛总决赛中医药赛道铜奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：国家级；获奖时间：2023.08</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>第九届山东省"互联网+"大学生创新创业大赛中获得金奖</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>、王彬、魏然</div>
-                    <div class="pub-venue">题目：迅捷探栓—国内基于RNA联合预测模型的深静脉血栓早筛开创者，2023.08</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第八届全国大学生基础医学创新研究暨实验设计论坛总决赛中医药赛道铜奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：国家级；获奖时间：2022.12</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>指导本科生参加第九届中国国际"互联网+"大学生创新创业大赛获得国赛银奖</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>、王彬、魏然</div>
-                    <div class="pub-venue">题目：迅捷探栓—国内基于RNA联合预测模型的深静脉血栓早筛开创者，2023.12</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>山东中医药大学2025年国家级大学生创新创业训练计划项目</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：国家级；获奖时间：2025.10</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>第九届"全国大学生基础医学创新研究暨实验设计论坛" 本科院校中医药学赛道国赛三等奖</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>，魏然</div>
-                    <div class="pub-venue">基于 circRNA／STAT1 信号通路调节巨噬细胞功能探讨寿胎丸治疗 URSA 作用与机制，2023.08</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第十四届"挑战杯"山东省大学生创业计划竞赛金奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：省级；获奖时间：2024.06</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>山东省大学生职业规划大赛金奖：大学生职业生涯规划</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">2024.04</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第九届山东省"互联网+"大学生创新创业大赛金奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：省级；获奖时间：2023.08</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>第十四届"挑战杯"山东省大学生创业计划竞赛金奖：《迅捷探栓——深静脉血栓早期筛查领航者》</h4>
-                    <div class="pub-authors"><span class="me">李霞</span>、王彬、魏然</div>
-                    <div class="pub-venue">2024.06</div>
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>山东省大学生职业规划大赛金奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：省级；获奖时间：2024.04</div>
                 </div>
             </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第十一届全国大学生医学创新大赛暨2025"一带一路"国际竞赛东部赛区一等奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：省级；获奖时间：2025.08</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第十一届全国大学生医学创新大赛暨2025"一带一路"国际竞赛复赛国际赛道二等奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：省级；获奖时间：2025.07</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第八届全国大学生基础医学创新研究暨实验设计论坛本科院校东部赛区复赛中医药赛道二等奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：省级；获奖时间：2022.12</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第八届全国大学生基础医学创新研究暨实验设计论坛本科院校东部赛区复赛基础医学赛道三等奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：省级；获奖时间：2022.12</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>"长青杯"首届山东省"营养与环境可持续发展"创新创意大赛二等奖</h4>
+                    <div class="item-meta">指导老师：<span class="me">李霞（第1位）</span></div>
+                    <div class="item-sub">获奖等级：省级；获奖时间：2025.12</div>
+                </div>
+            </div>
+
         </section>
 
-        <section>
+        <section class="section section-guideline">
             <h2>参编指南</h2>
             
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>先兆流产中西医结合诊疗方案</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">认定机构：中华中医药学会，认定时间：2022.04</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">认定机构：中华中医药学会，认定时间：2022.04</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>中成药治疗先兆流产临床应用指南</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">认定机构：中国中药协会，认定时间：2021.10</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">认定机构：中国中药协会，认定时间：2021.10</div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="section section-honor">
             <h2>获得荣誉称号</h2>
-            
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>泰山特聘专家</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省人民政府，2024.05</div>
-                </div>
-            </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>第十四届"挑战杯"优秀指导教师</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东中医药大学，2024.05</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>山东省"十佳五一巾帼标兵"</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省总工会，2024.03</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>山东省"五一巾帼标兵"</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省总工会，2024.03</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>2023年度教育科技人才贡献奖</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东中医药大学，2024.01</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>优秀党务工作者</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东中医药大学，2023.03</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>人才工作先进个人</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东中医药大学，2023.04</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>山东省中医药高层次领军人才</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省卫健委，2023.04</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>2022年度优秀党务工作者</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东中医药大学，2023.01</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>国家青年岐黄学者</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：国家中医药管理局，2022.12</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：国家中医药管理局，2022.12</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>泰山特聘专家</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省人民政府，2024.05</div>
+                </div>
+            </div>
+          
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>山东省"十佳五一巾帼标兵"</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省总工会，2024.03</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>山东省"五一巾帼标兵"</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省总工会，2024.03</div>
+                </div>
+            </div>
+         
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>山东省中医药高层次领军人才</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省卫健委，2023.04</div>
+                </div>
+            </div>
+         
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>于金明科技创新奖</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省医科院，2021.09</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省医科院，2021.09</div>
                 </div>
             </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
-                    <h4>女职工建功立业标兵</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东第一医科大学，2021.04</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>记三等功</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省医科院，2019.01</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省医科院，2019.01</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>泰山学者青年专家</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省人民政府，2018.12</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省人民政府，2018.12</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>优秀共产党员</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省医科院，2017.07</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省医科院，2017.07</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>三八红旗手</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省直机关妇工委、工会女委，2017.03</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省直机关妇工委、工会女委，2017.03</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>于金明科技创新奖</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省医科院，2017.01</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省医科院，2017.01</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>最美青年</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省直机关团工委、省直机关青联，2016.10</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省直机关团工委、省直机关青联，2016.10</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>优秀硕士生指导教师</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省医科院，2016.06</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省医科院，2016.06</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>优秀学会工作者</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省科学技术协会，2015.12</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省科学技术协会，2015.12</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>第十届山东省青年科技奖</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：中共山东省委组织部、山东省人力资源和社会保障厅、山东省科学技术协会，2015.05</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：中共山东省委组织部、山东省人力资源和社会保障厅、山东省科学技术协会，2015.05</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>于金明科技创新奖</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省医科院，2015.02</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省医科院，2015.02</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>记三等功</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省医科院，2015.02</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省医科院，2015.02</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>记三等功</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省医科院，2014.02</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省医科院，2014.02</div>
                 </div>
             </div>
 
-            <div class="pub-item">
-                <div class="pub-thumbnail"></div>
-                <div class="pub-details">
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
                     <h4>优秀共产党员</h4>
-                    <div class="pub-authors"><span class="me">李霞</span></div>
-                    <div class="pub-venue">授予部门：山东省医科院，2013.07</div>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东省医科院，2013.07</div>
                 </div>
             </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>第十四届"挑战杯"优秀指导教师</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东中医药大学，2024.05</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>2022年度优秀党务工作者</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东中医药大学，2023.01</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>女职工建功立业标兵</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东第一医科大学，2021.04</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>2023年度教育科技人才贡献奖</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东中医药大学，2024.01</div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>优秀党务工作者</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东中医药大学，2023.03</div>
+                </div>
+            </div>
+  
+            <div class="item-card">
+                <div class="item-icon"></div>
+                <div class="item-content">
+                    <h4>人才工作先进个人</h4>
+                    <div class="item-meta"><span class="me">李霞</span></div>
+                    <div class="item-sub">授予部门：山东中医药大学，2023.04</div>
+                </div>
+            </div>
+
         </section>
     </main>
-
-    <footer>
+<footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>联系我们</h3>
-                    <p>地址：山东省济南市历下区经十路16369号</p>
-                    <p>山东中医药大学中医药创新研究院</p>
-                    <p>邮编：250355</p>
-                </div>
-                <div class="footer-section">
-                    <h3>快速链接</h3>
-                    <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="members.html">团队成员</a></li>
-                        <li><a href="publications.html">科研成果</a></li>
-                        <li><a href="news.html">新闻动态</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>关于我们</h3>
-                    <p>中医药免疫研究团队致力于中医药免疫调控关键机制研究，为中医药现代化发展贡献力量。</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 中医药免疫研究团队. All rights reserved.</p>
-            </div>
+            <p>&copy; 2024 中医药免疫研究团队. 版权所有</p>
+            <p>地址：山东省济南市长清区大学科技园大学路4655号山东中医药大学中医药创新研究院</p>
+            <p>邮编：250355</p>
         </div>
     </footer>
-</body>
+    </body>
 </html>
